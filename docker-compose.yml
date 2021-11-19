@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mongodb
-    build: ./
+    build: ./api_with_mongo
     restart: unless-stopped
     env_file: ./.env
     ports:
