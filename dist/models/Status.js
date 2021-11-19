@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _mongoose=_interopRequireDefault(require("mongoose"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}const Schema=_mongoose.default.Schema;const statusSchema=_mongoose.default.Schema({_id:Number,Label:String});// export model
+var _default=_mongoose.default.model("Status",statusSchema);exports.default=_default;

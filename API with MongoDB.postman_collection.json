@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "d2b63463-ec15-48a4-8acb-898cb8c76afa",
+		"name": "API with MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User By Id Without Password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/user/61929c38fc8df06790d29309",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"user",
+						"61929c38fc8df06790d29309"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"user2\",\r\n    \"password\" : \"password\",\r\n    \"email\" : \"user2@dompetkilat.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User and Seeding Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"user1@dompetkilat.com\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Tasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGRvbXBldGtpbGF0LmNvbSIsInVzZXJJZCI6IjYxOTc0MmRmN2I5MGFjMzg5MzdiMWIyMiIsIlR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM3MzAzMDMzLCJleHAiOjE2MzczODk0MzN9.EFZKPmPXOa9xTYqZ4kFSXwKqxp2r4r0HIhtyEUmRz14",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"StatusId\" : 3,\r\n    \"task\" : \"TEST TASK USER 1\",\r\n    \"completed\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/tasks/619745927b90ac38937b1b5b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"tasks",
+						"619745927b90ac38937b1b5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks By Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/task/waiting for review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"task",
+						"waiting for review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Tasks",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGRvbXBldGtpbGF0LmNvbSIsInVzZXJJZCI6IjYxOTc0MmRmN2I5MGFjMzg5MzdiMWIyMiIsIlR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM3MzA0MDUxLCJleHAiOjE2MzczOTA0NTF9.Xr0i2P2rICnl_g9kaTndQb1X2QnhrIvAIXlibDmJfjg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"619742df7b90ac38937b1b22\",\r\n    \"task\" : \"TEST UPDATE LAGI OLEH AUTHOR\",\r\n    \"completed\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/tasks/619745927b90ac38937b1b5b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"tasks",
+						"619745927b90ac38937b1b5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task Status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGRvbXBldGtpbGF0LmNvbSIsInVzZXJJZCI6IjYxOTc0MmRmN2I5MGFjMzg5MzdiMWIyMiIsIlR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM3MzA0MDUxLCJleHAiOjE2MzczOTA0NTF9.Xr0i2P2rICnl_g9kaTndQb1X2QnhrIvAIXlibDmJfjg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"StatusId\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/task/status/619745927b90ac38937b1b5b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"task",
+						"status",
+						"619745927b90ac38937b1b5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tasks By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFybWlhcml5YW4yMEBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MTkyOTY0MDRlNjY4MmZjODNiNWRkNjUiLCJUeXBlIjoiYWRtaW4iLCJpYXQiOjE2MzcyMDcyMDAsImV4cCI6MTYzNzI5MzYwMH0.4Jlwbm8Fw8XnC1q442HOT07JtBvkftVpNaf7eSJRXCY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6868/tasks/619745927b90ac38937b1b5b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"tasks",
+						"619745927b90ac38937b1b5b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

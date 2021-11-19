@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _mongoose=_interopRequireDefault(require("mongoose"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}const Schema=_mongoose.default.Schema;const userSchema=_mongoose.default.Schema({username:String,password:String,Type:{type:String,enum:["admin","user"],default:"user"},email:{type:String,unique:true}});// export model
+var _default=_mongoose.default.model("User",userSchema);exports.default=_default;

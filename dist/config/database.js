@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _mongoose=_interopRequireDefault(require("mongoose"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}const{DB_USER,DB_PASSWORD,DB_HOST,DB_PORT,DB_NAME}=process.env;_mongoose.default.connect("mongodb://localhost:27017/api_with_mongo",{// mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`, {
+useNewUrlParser:true,useUnifiedTopology:true});const db=_mongoose.default.connection;var _default=db;exports.default=_default;
